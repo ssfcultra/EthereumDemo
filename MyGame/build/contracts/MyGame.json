@@ -1,0 +1,478 @@
+{
+  "contractName": "MyGame",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "ShowScore",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6101fc8061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f06c5f0f14610046575b600080fd5b341561005157600080fd5b6100a1600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100b7565b6040518082815260200191505060405180910390f35b600080732c52867bc221de7b3a101a5c5381333f535598b290508073ffffffffffffffffffffffffffffffffffffffff1663308d1964846000604051602001526040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b83811015610162578082015181840152602081019050610147565b50505050905090810190601f16801561018f5780820380516001836020036101000a031916815260200191505b5092505050602060405180830381600087803b15156101ad57600080fd5b6102c65a03f115156101be57600080fd5b505050604051805190509150509190505600a165627a7a723058204bf1d11cd1dfce06e6f8c61692044b40f4c5581ce0b1e85cf4ebbf3867237df80029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f06c5f0f14610046575b600080fd5b341561005157600080fd5b6100a1600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100b7565b6040518082815260200191505060405180910390f35b600080732c52867bc221de7b3a101a5c5381333f535598b290508073ffffffffffffffffffffffffffffffffffffffff1663308d1964846000604051602001526040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b83811015610162578082015181840152602081019050610147565b50505050905090810190601f16801561018f5780820380516001836020036101000a031916815260200191505b5092505050602060405180830381600087803b15156101ad57600080fd5b6102c65a03f115156101be57600080fd5b505050604051805190509150509190505600a165627a7a723058204bf1d11cd1dfce06e6f8c61692044b40f4c5581ce0b1e85cf4ebbf3867237df80029",
+  "sourceMap": "109:225:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "109:225:0:-;;;;;;;;;;;;;;;;;;;;;;;;131:200;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;179:3;200:22;237:42;200:80;;298:10;:19;;;318:4;298:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;291:32:0;;131:200;;;;:::o",
+  "source": "pragma solidity ^0.4.4;\r\ncontract IScoreStore{\r\n    function GetScore(string name) public returns (int);\r\n}\r\ncontract MyGame{\r\n    function ShowScore(string name) public returns (int)\r\n    {\r\n        IScoreStore scoreStore = IScoreStore(0x2c52867bc221de7b3a101a5c5381333f535598b2);\r\n        return scoreStore.GetScore(name);\r\n    }\r\n}",
+  "sourcePath": "C:\\repos\\Projects\\EthereumDemo\\MyGame\\contracts\\MyGame.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/repos/Projects/EthereumDemo/MyGame/contracts/MyGame.sol",
+      "exportedSymbols": {
+        "IScoreStore": [
+          9
+        ],
+        "MyGame": [
+          29
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".4"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            9
+          ],
+          "name": "IScoreStore",
+          "scope": 30
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "GetScore",
+              "payable": false,
+              "scope": 9,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 8,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 2,
+                        "name": "ElementaryTypeName",
+                        "src": "70:6:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "VariableDeclaration",
+                    "src": "70:11:0"
+                  }
+                ],
+                "id": 4,
+                "name": "ParameterList",
+                "src": "69:13:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 8,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 5,
+                        "name": "ElementaryTypeName",
+                        "src": "99:3:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "VariableDeclaration",
+                    "src": "99:3:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ParameterList",
+                "src": "98:5:0"
+              }
+            ],
+            "id": 8,
+            "name": "FunctionDefinition",
+            "src": "52:52:0"
+          }
+        ],
+        "id": 9,
+        "name": "ContractDefinition",
+        "src": "25:82:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            29
+          ],
+          "name": "MyGame",
+          "scope": 30
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "ShowScore",
+              "payable": false,
+              "scope": 29,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 28,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 10,
+                        "name": "ElementaryTypeName",
+                        "src": "150:6:0"
+                      }
+                    ],
+                    "id": 11,
+                    "name": "VariableDeclaration",
+                    "src": "150:11:0"
+                  }
+                ],
+                "id": 12,
+                "name": "ParameterList",
+                "src": "149:13:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 28,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 13,
+                        "name": "ElementaryTypeName",
+                        "src": "179:3:0"
+                      }
+                    ],
+                    "id": 14,
+                    "name": "VariableDeclaration",
+                    "src": "179:3:0"
+                  }
+                ],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "178:5:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        17
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "scoreStore",
+                          "scope": 28,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "contract IScoreStore",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "IScoreStore",
+                              "referencedDeclaration": 9,
+                              "type": "contract IScoreStore"
+                            },
+                            "id": 16,
+                            "name": "UserDefinedTypeName",
+                            "src": "200:11:0"
+                          }
+                        ],
+                        "id": 17,
+                        "name": "VariableDeclaration",
+                        "src": "200:22:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract IScoreStore",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_253035970181620526748916839566904083869116766386_by_1",
+                                  "typeString": "int_const 253035970181620526748916839566904083869116766386"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9,
+                              "type": "type(contract IScoreStore)",
+                              "value": "IScoreStore"
+                            },
+                            "id": 18,
+                            "name": "Identifier",
+                            "src": "225:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "307832633532383637626332323164653762336131303161356335333831333333663533353539386232",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 253035970181620526748916839566904083869116766386",
+                              "value": "0x2c52867bc221de7b3a101a5c5381333f535598b2"
+                            },
+                            "id": 19,
+                            "name": "Literal",
+                            "src": "237:42:0"
+                          }
+                        ],
+                        "id": 20,
+                        "name": "FunctionCall",
+                        "src": "225:55:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclarationStatement",
+                    "src": "200:80:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 15
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "int256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "GetScore",
+                              "referencedDeclaration": 8,
+                              "type": "function (string memory) external returns (int256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 17,
+                                  "type": "contract IScoreStore",
+                                  "value": "scoreStore"
+                                },
+                                "id": 22,
+                                "name": "Identifier",
+                                "src": "298:10:0"
+                              }
+                            ],
+                            "id": 23,
+                            "name": "MemberAccess",
+                            "src": "298:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 11,
+                              "type": "string memory",
+                              "value": "name"
+                            },
+                            "id": 24,
+                            "name": "Identifier",
+                            "src": "318:4:0"
+                          }
+                        ],
+                        "id": 25,
+                        "name": "FunctionCall",
+                        "src": "298:25:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "Return",
+                    "src": "291:32:0"
+                  }
+                ],
+                "id": 27,
+                "name": "Block",
+                "src": "189:142:0"
+              }
+            ],
+            "id": 28,
+            "name": "FunctionDefinition",
+            "src": "131:200:0"
+          }
+        ],
+        "id": 29,
+        "name": "ContractDefinition",
+        "src": "109:225:0"
+      }
+    ],
+    "id": 30,
+    "name": "SourceUnit",
+    "src": "0:334:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "10101010": {
+      "events": {},
+      "links": {},
+      "address": "0xccce373cefebfde7abcd85e98770738215fb7e6f"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-18T21:26:07.533Z"
+}
